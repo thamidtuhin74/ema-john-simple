@@ -3,6 +3,7 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash ,faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Shop.css'
+import Cart from '../Cart/Cart';
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
@@ -32,14 +33,7 @@ const Shop = () => {
                 }
             </div>
             <div className="order-summary">
-                <h3>Order Summary</h3>
-                <p>Selected Item : {cart.length}</p>
-                <p>Total Price: $1140</p>
-                <p>Total Shipping Charge: $5</p>
-                <p>Tax: $114</p>
-                <h3>Grand Total: $1559</h3>
-                <button>Clear Cart<FontAwesomeIcon icon={faTrash} /></button>
-                <button>Review Cart<FontAwesomeIcon icon={faArrowRight} /></button>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
