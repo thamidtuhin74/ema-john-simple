@@ -1,0 +1,15 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.products-container{
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.order-summary{
+    background: rgba(255, 153, 0, 0.3);
+    height: 100vh;
+    padding: 0 15px;
+}
